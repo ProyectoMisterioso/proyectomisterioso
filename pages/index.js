@@ -18,10 +18,10 @@ export default function Home() {
           Este proyecto puede darle una idea para tu proyecto de la clase de
           espa&ntilde;ol.
         </h2>
-        <div className="grid-container">
-          <div className="grid-item">Museo de Cerra</div>
-          <div className="grid-item">Autorretratos</div>
-          <div className="grid-item">Tanque de Tiburones</div>
+        <div className="grid">
+          <div>Museo de Cerra</div>
+          <div>Autorretratos</div>
+          <div>Tanque de Tiburones</div>
         </div>
       </main>
     </>
