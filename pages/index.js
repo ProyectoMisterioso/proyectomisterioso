@@ -1,9 +1,68 @@
 import Head from "next/head";
 import { useState } from "react";
 
-const [response, setResponse] = useState(" ");
-
 export default function Home() {
+  const [response, setResponse] = useState(" ");
+
+  const artists = [
+    "Pablo Picasso",
+    "Frida Kahlo",
+    "Diego Velazquez",
+    "Salvador Dali",
+    "Jean-Michael Basquiat",
+    "Diego  Rivera",
+    "Francisco Goya",
+    "Jose Clemente Orozco",
+    "Fernando Botero",
+    "Joan Miro",
+  ];
+
+  const art = [
+    "Abstracto",
+    "Impresionismo",
+    "Cubismo",
+    "Surrealismo",
+    "Realismo",
+  ];
+
+  const nouns = [
+    "Carro",
+    "Gato",
+    "Pero",
+    "Caja",
+    "Agua",
+    "Bano",
+    "Cama",
+    "Pan",
+  ];
+
+  const adjectives = [
+    "Grande",
+    "Pequeno",
+    "Largo",
+    "Corto",
+    "Robot",
+    "Energia",
+    "Inteligente",
+    "Fuerte",
+  ];
+
+  function MuseoDeCerra() {
+    setResponse(artists[Math.floor(Math.random() * artists.length)]);
+  }
+
+  function Autorretrato() {
+    setResponse(art[Math.floor(Math.random() * art.length)]);
+  }
+
+  function TanqueDeTiburones() {
+    setResponse(
+      nouns[Math.floor(Math.random() * nouns.length)] +
+        " " +
+        adjectives[Math.floor(Math.random() * adjectives.length)]
+    );
+  }
+
   return (
     <>
       <Head>
@@ -27,11 +86,11 @@ export default function Home() {
             <h3>Museo de Cerra</h3>
             <img src="Picasso.jpg" />
           </div>
-          <div>
+          <div onClick={Autorretrato()}>
             <h3>Autorretrato</h3>
             <img src="Frida.jpg" />
           </div>
-          <div>
+          <div onClick={TanqueDeTiburones()}>
             <h3>Tanque de Tiburones</h3>
             <img src="Sharks.jpg" />
           </div>
@@ -39,55 +98,5 @@ export default function Home() {
         <h1>{response}</h1>
       </main>
     </>
-  );
-}
-
-const artists = [
-  "Pablo Picasso",
-  "Frida Kahlo",
-  "Diego Velazquez",
-  "Salvador Dali",
-  "Jean-Michael Basquiat",
-  "Diego  Rivera",
-  "Francisco Goya",
-  "Jose Clemente Orozco",
-  "Fernando Botero",
-  "Joan Miro",
-];
-
-const art = [
-  "Abstracto",
-  "Impresionismo",
-  "Cubismo",
-  "Surrealismo",
-  "Realismo",
-];
-
-const nouns = ["Carro", "Gato", "Pero", "Caja", "Agua", "Bano", "Cama", "Pan"];
-
-const adjectives = [
-  "Grande",
-  "Pequeno",
-  "Largo",
-  "Corto",
-  "Robot",
-  "Energia",
-  "Inteligente",
-  "Fuerte",
-];
-
-function MuseoDeCerra() {
-  setResponse(artists[Math.floor(Math.random() * artists.length)]);
-}
-
-function Autorretrato() {
-  setResponse(art[Math.floor(Math.random() * art.length)]);
-}
-
-function TanqueDeTiburones() {
-  setResponse(
-    setResponse(nouns[Math.floor(Math.random() * nouns.length)]) +
-      " " +
-      setResponse(adjectives[Math.floor(Math.random() * adjectives.length)])
   );
 }
