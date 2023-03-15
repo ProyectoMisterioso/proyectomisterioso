@@ -82,16 +82,19 @@ export default function Home() {
           espa&ntilde;ol.
         </h2>
         <div className="grid">
-          <div onClick={MuseoDeCerra()}>
+          <div>
             <h3>Museo de Cerra</h3>
+            <button onClick={MuseoDeCerra} />
             <img src="Picasso.jpg" />
           </div>
-          <div onClick={Autorretrato()}>
+          <div>
             <h3>Autorretrato</h3>
+            <button onClick={Autorretrato} />
             <img src="Frida.jpg" />
           </div>
-          <div onClick={TanqueDeTiburones()}>
+          <div>
             <h3>Tanque de Tiburones</h3>
+            <button onClick={TanqueDeTiburones} />
             <img src="Sharks.jpg" />
           </div>
         </div>
