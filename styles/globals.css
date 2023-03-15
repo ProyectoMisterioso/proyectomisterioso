@@ -12,6 +12,12 @@ h2 {
   text-align: center;
 }
 
+img {
+  display: block;
+  height: 10em;
+  margin: auto;
+}
+
 .grid {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -35,6 +41,7 @@ h2 {
   border-radius: 1em;
   border-style: solid;
   border-color: white;
+  margin: 1em 0em;
 }
 
 .grid div:hover {
@@ -45,4 +52,17 @@ h2 {
 
 .grid div img:hover {
   border-color: black;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  body {
+    padding: 0;
+  }
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+  .grid div {
+    margin: 1em auto;
+  }
 }
