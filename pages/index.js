@@ -19,9 +19,18 @@ export default function Home() {
           espa&ntilde;ol.
         </h2>
         <div className="grid">
-          <div>Museo de Cerra</div>
-          <div>Autorretratos</div>
-          <div>Tanque de Tiburones</div>
+          <div>
+            <h3>Museo de Cerra</h3>
+            <img src="Picasso.jpg" />
+          </div>
+          <div>
+            <h3>Autorretratos</h3>
+            <img src="Frida.jpg" />
+          </div>
+          <div>
+            <h3>Tanque de Tiburones</h3>
+            <img src="Sharks.jpg" />
+          </div>
         </div>
       </main>
     </>
